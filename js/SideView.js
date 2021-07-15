@@ -19,10 +19,10 @@ AFRAME.registerComponent("place-side-view",{
         let prevXPos = -150;
         let prevYPos = 30;
 
-        for(var i=0;i<=4;i++){
+        for(var i=1;i<=4;i++){
             const position ={
                 x:(prevXPos += 50),
-                y:(prevYPos += -3),
+                y:(prevYPos += 2),
                 z: -40    
             }
             const entityEl = this.createPlaceThumbNail(position,i);
