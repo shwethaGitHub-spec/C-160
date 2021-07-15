@@ -6,6 +6,7 @@ AFRAME.registerComponent("tour",{
   },
   init:function(){
     this.placesContainer = this.el;
+    this.cameraEl = document.querySelector("#camera");
     this.createCards();
   },
 
@@ -104,6 +105,7 @@ AFRAME.registerComponent("tour",{
       entityEl.setAttribute("visible", true)
       entityEl.setAttribute("geometry", {primitive: "circle", radius: 9})
       entityEl.setAttribute("material", {src:item.url})
+      entityEl.setAttribute("cursor-listener", {});
       return entityEl
   }, 
 
